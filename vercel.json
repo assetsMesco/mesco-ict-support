@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/generate-address",
+      "dest": "/api/generate-address.js"
+    },
+    {
+      "src": "/api/get-address/(.*)",
+      "dest": "/api/get-address.js"
+    }
+  ]
+}
